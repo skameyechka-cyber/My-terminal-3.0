@@ -17,7 +17,7 @@ int main()
     system("chcp 65001 > nul");
     char username[21];
     char input[100];
-    char notepad[] = ("notepad");
+    char notepad[] = "notepad";
 
     printf("Enter your username (Max 20 characters): ");
     scanf(" %20[^\n]", username);
@@ -25,10 +25,10 @@ int main()
            "Welcome, %s!\n"
            "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n", username);
 
-    Sleep(1000);
+    sleep(1000);
 
     printf("Write 'help' to get a list of available commands.\n");
-    Sleep(1000);
+    sleep(1000);
     printf("Write 'exit' to exit program.\n");
 
    while(1)
@@ -52,15 +52,15 @@ int main()
     else if (strcmp(input, "exit") == 0)
     {
         printf("\nGoodbye, %s!\n", username);
-        Sleep(1000);
+        sleep(1000);
         exit(0);
     }
 
        else if (strcmp(input, "clear") == 0)
        {
-           system("cls");
+           system(clear);
            printf("Write 'help' to get a list of available commands.\n");
-           Sleep(1000);
+           sleep(1000);
            printf("Write 'exit' to exit program.\n");
        }
 
@@ -81,16 +81,16 @@ int main()
 
        else if (strcmp(input, "newname")==0)
        {
-           system("cls");
+           system(clear);
            printf("Enter your new username (Max 20 characters): ");
         scanf(" %20[^\n]", username);
-           system("cls");
+           system(clear);
            printf("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n"
            "Welcome, %s!\n"
            "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n", username);
-           Sleep(1000);
+           sleep(1000);
            printf("Write 'help' to get a list of available commands.\n");
-           Sleep(1000);
+           sleep(1000);
            printf("Write 'exit' to exit program.\n");
        }
 
